@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head><title>Position of Left-most String</title>
+ 
+ <script>
+		 	function vow(str){
+		 		var strPos;
+				strPos=str.search(/[aeiouAEIOU]/);
+		 		if(strPos<0)
+		 		alert("Vowel not found\n");
+		 		else
+		 		alert("Position of the left most vowel is "+(strPos+1));
+		 }
+ </script>
+
+ </head>
+
+ <body>
+ <form>
+ <p>Enter any string:</p>
+ <input type="text" id="voweltext"/>
+ <input type="button" value="Click" onclick="vow(voweltext.value);"/>
+ </form>
+
+  </body>
+ </html>

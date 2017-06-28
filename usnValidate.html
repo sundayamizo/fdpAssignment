@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USN VALIDATION</title>
+     <script type="text/javascript">
+                finder=function()
+                    {
+                        
+                        var a=document.getElementById('usn').value;
+                        var s=document.getElementById('sem').value;
+                        if(a.length==0 || s.length==0)
+                         
+                            {
+                                alert("One of the field is empty");
+                                return;
+                            }
+                      
+                        var usn_flag=0;
+                        var sem_flag=0;
+                        var b=a.toLowerCase();
+                        var str=b.search(/^[1-4][a-z][a-z][0-9][0-9][a-z][a-z][0-9][0-9][0-9]/);
+                        if(str==0)
+                            usn_flag=1;
+                        str=s.search(/^[1-8]$/);
+                        if(str==0)
+                            sem_flag=1;
+                        if(!sem_flag && !usn_flag)
+                            alert("Both USN & SEM are invalid");
+                        else if(sem_flag && !usn_flag)
+                            alert("Sem is valid\nUSN is invalid");
+                        else if(!sem_flag && usn_flag)
+                            alert("USN is valid\nSem is invalid");
+                        else
+                            alert("Both USN and Sem are valid");
+                    }
+            </script>
+    
+</head>
+<body>
+
+       
+        <form onsubmit=finder()>
+            Enter USN:<input type=text id=usn><br>
+            Enter Sem(1-8):<input type=text id=sem><br>
+            <input type=submit value=submit>
+        </form>
+    </body>
+ </html>
+</body>
+</html>

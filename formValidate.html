@@ -1,0 +1,93 @@
+<html>
+
+<head>
+
+<title>Form Validation</title>
+
+<script type="text/javascript">
+
+<!--
+
+function validate_form ( )
+{
+	valid = true;
+
+        if ( document.contact_form.contact_name.value == "" )
+        {
+                alert ( "Please fill in the 'Your Name' box." );
+                valid = false;
+        }
+
+        if ( document.contact_form.email.value == "" )
+        {
+                alert ( "Please fill in the 'Your Email' box." );
+                valid = false;
+        }
+
+        if ( ( document.contact_form.gender[0].checked == false ) && ( document.contact_form.gender[1].checked == false ) )
+        {
+                alert ( "Please choose your Gender: Male or Female" );
+                valid = false;
+        }
+
+        if ( document.contact_form.age.value == "" )
+        {
+                alert ( "Please fill in your Age." );
+                valid = false;
+        }
+
+        if ( document.contact_form.subject.value == "" )
+        {
+                alert ( "Please fill in your Subject." );
+                valid = false;
+        }
+
+        if ( document.contact_form.terms.checked == false )
+        {
+                alert ( "Please check the Terms & Conditions box." );
+                valid = false;
+        }
+
+
+
+        if(valid==true){
+                alert('Thank you!');
+        }
+}
+
+//-->
+
+</script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<form name="contact_form" method="post" action="formValidate.html" onSubmit="return validate_form ( );">
+
+<h1>Registration Form</h1>
+
+<p>Your Name: <input type="text" name="contact_name"></p>
+
+<p>Your Email: <input type="text" name="email"></p>
+
+<p>Your Gender: <input type="radio" name="gender" value="Male"> Male
+&nbsp; <input type="radio" name="gender" value="Female"> Female</p>
+
+<p>Your Age:
+<input type="text" name="age"/>
+</p>
+
+<p>Your Subject
+<input type="text" name="subject"/>
+</p>
+<p>Do you agree to the Terms and Conditions?
+<input type="checkbox" name="terms" value="Yes"> Yes
+
+<p><input type="submit" name="send" value="Submit Form"></p>
+
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+
+function changeColor() {
+    var input = document.getElementById('color'),
+        color = input.value;
+    if (color) {
+       $(document).ready(function(){
+    $("a").click(function(){
+        $("b").text(color);
+    });
+});
+    } else {
+        alert('Please enter a color!');
+        input.focus();
+    }
+}
+</script>
+</head>
+<body>
+
+
+
+
+<p>I never saw a <b>blue</b> cow, I never hope to see one; But I can tell you, anyhow,
+I'd rather see than be one.</p>
+
+Change the cow's color to: <input name="color" id="color" type="text">
+<a id="record_button" onclick="changeColor();" href="javascript:void(0);" title="Record">Change</a>
+
+</body>
+</html>

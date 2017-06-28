@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<title>Reverse Number</title>
+<script>
+	function rev(n){
+
+		n=parseInt(n);
+		var temp=0,rev=0;
+		while(n>0){
+			temp=n%10;
+			rev=rev*10+temp;
+			n=n/10;
+			n=parseInt(n);
+		}
+
+		document.write("The Reverse number is:",rev);
+}
+</script>
+
+<body>
+
+<form>
+<p>Enter any number</p>
+<input type="text" id="num"/>
+ <input type="button" value="Click" onclick="rev(num.value);"/>
+</form>
+
+</body>
+</html>
+
+
